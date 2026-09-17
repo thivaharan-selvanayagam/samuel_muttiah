@@ -3,71 +3,60 @@
 import Link from "next/link";
 import { BRAND_CONFIG } from "@/config/brand";
 
-interface Neighborhood {
-  name: string;
+interface TransitionService {
+  title: string;
+  category: string;
   desc: string;
   image: string;
   gridClass: string;
 }
 
-const neighborhoodData: Neighborhood[] = [
+const serviceData: TransitionService[] = [
   {
-    name: "Pickering",
-    desc: "Vibrant waterfront community featuring GO Transit access, expanding pre-construction projects, and strong equity growth potential.",
-    image: "/images/neighborhood/pickering.jpg",
+    title: "Residential & Commercial Real Estate",
+    category: "Core Representation",
+    desc: "End-to-end buying, selling, and investment representation across Southern California, backed by 10+ years of GTA and SoCal dual-market expertise.",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop",
     gridClass: "col-span-12 md:col-span-7 aspect-[16/10] md:aspect-auto md:h-[340px]"
   },
   {
-    name: "Ajax",
-    desc: "Family-friendly suburban enclave offering spacious floor plans, expansive parklands, and accessible lakeside living.",
-    image: "/images/neighborhood/ajax.jpg",
+    title: "Immigration & Visa Legal Support",
+    category: "Legal Network",
+    desc: "Direct coordination with specialized cross-border immigration attorneys for visa planning, work permits, and residency considerations.",
+    image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=1600&auto=format&fit=crop",
     gridClass: "col-span-12 md:col-span-5 aspect-[16/10] md:aspect-auto md:h-[340px]"
   },
   {
-    name: "Whitby",
-    desc: "Picturesque historic downtown paired with modern residential subdivisions, top-rated schools, and dynamic green spaces.",
-    image: "/images/neighborhood/whitby.jpg",
+    title: "U.S. Tax & Cross-Border Wealth Strategy",
+    category: "Financial Planning",
+    desc: "Connect with U.S. CPAs and accountants specializing in dual-country tax reporting, asset transfer, and financial structuring.",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1600&auto=format&fit=crop",
     gridClass: "col-span-12 md:col-span-4 aspect-[16/10] md:aspect-auto md:h-[320px]"
   },
   {
-    name: "Oshawa",
-    desc: "One of Durham Region's top investment hubs, delivering accessible homeownership options and high long-term rental demand.",
-    image: "/images/neighborhood/oshawa.jpeg",
+    title: "Vehicle Transport & U.S. Importation",
+    category: "Logistics",
+    desc: "Seamless, compliant transport of your personal vehicles from Canada to Southern California with vetted auto-import specialists.",
+    image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=1600&auto=format&fit=crop",
     gridClass: "col-span-12 md:col-span-4 aspect-[16/10] md:aspect-auto md:h-[320px]"
   },
   {
-    name: "Stouffville",
-    desc: "Charming small-town feel offering scenic countryside views, modern family homes, and a peaceful pace of life.",
-    image: "/images/neighborhood/stouffville.jpg",
+    title: "Cross-Border International Moving",
+    category: "Relocation Services",
+    desc: "Trusted international moving partners experienced in customs clearances, border logistics, and door-to-door delivery.",
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop",
     gridClass: "col-span-12 md:col-span-4 aspect-[16/10] md:aspect-auto md:h-[320px]"
   },
   {
-    name: "Markham",
-    desc: "Dynamic technology and business hub known for master-planned communities, excellent school districts, and high resale demand.",
-    image: "/images/neighborhood/markham.jpg",
-    gridClass: "col-span-12 md:col-span-5 aspect-[16/10] md:aspect-auto md:h-[340px]"
-  },
-  {
-    name: "Vaughan",
-    desc: "Rapidly expanding urban center anchored by subway connectivity, major civic infrastructure, and spacious detached homes.",
-    image: "/images/neighborhood/vaughan.jpg",
-    gridClass: "col-span-12 md:col-span-7 aspect-[16/10] md:aspect-auto md:h-[340px]"
-  },
-  {
-    name: "Richmond Hill",
-    desc: "High-demand York Region enclave with top-ranking schools, scenic trail networks, and enduring real estate value.",
-    image: "/images/neighborhood/richmond-hill.jpg",
-    gridClass: "col-span-12 md:col-span-6 aspect-[16/10] md:aspect-auto md:h-[340px]"
-  },
-  {
-    name: "Toronto",
-    desc: "Canada's economic epicenter, featuring high-density transit corridor condos, historic tree-lined streets, and high investment utility.",
-    image: "/images/neighborhood/toronto.avif",
-    gridClass: "col-span-12 md:col-span-6 aspect-[16/10] md:aspect-auto md:h-[340px]"
+    title: "U.S. Financing & Lender Access",
+    category: "Mortgage Guidance",
+    desc: "Customized U.S. home financing solutions tailored specifically for Canadian buyers establishing credit or investing in SoCal real estate.",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600&auto=format&fit=crop",
+    gridClass: "col-span-12 md:col-span-12 aspect-[16/10] md:aspect-auto md:h-[300px]"
   }
 ];
 
-export default function NeighborhoodGrid() {
+export default function ServicesGrid() {
   const cleanPrimaryText = BRAND_CONFIG.theme.primaryText;
 
   return (
@@ -76,49 +65,50 @@ export default function NeighborhoodGrid() {
         
         {/* SECTION HEADER */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
-          <div className="bg-stone-200/60 text-stone-900 text-[10px] md:text-xs font-semibold tracking-widest uppercase px-5 py-2 rounded-full mb-5 shadow-sm border border-stone-300/40">
-            Greater Toronto Area Communities
+          <div className="bg-[#2b4b46]/10 text-[#2b4b46] text-[10px] md:text-xs font-semibold tracking-widest uppercase px-5 py-2 rounded-full mb-5 shadow-sm border border-[#2b4b46]/20">
+            Canada-to-U.S. Transition Ecosystem
           </div>
           
           <h2 className={`font-display text-3xl md:text-4xl lg:text-5xl font-bold ${cleanPrimaryText} tracking-tight leading-[1.15] mb-5`}>
-            Where Every Neighborhood Tells Its Own Story
+            Comprehensive Support for Your Cross-Border Move
           </h2>
           
           <p className="text-stone-600 text-sm md:text-base leading-relaxed font-normal">
-            Finding the right property starts with finding the right community. Explore our GTA neighborhood guides for real insights on local living, market trends, and property potential.
+            Relocating across borders requires more than real estate expertise. Samuel Muttiah acts as your single point of contact, coordinating property transactions while connecting you with trusted cross-border professionals.
           </p>
         </div>
 
         {/* BENTO GRID SYSTEM */}
         <div className="grid grid-cols-12 gap-6 w-full">
-          {neighborhoodData.map((city, idx) => {
-            const citySlug = city.name.toLowerCase().replace(/\s+/g, "-");
-            
+          {serviceData.map((service, idx) => {
             return (
               <Link 
                 key={idx}
-                href={`/neighbourhoods/${citySlug}`}
-                className={`relative block rounded-3xl overflow-hidden group shadow-sm hover:shadow-xl transition-all duration-300 ${city.gridClass}`}
+                href={`/contact?intent=${encodeURIComponent(service.title)}`}
+                className={`relative block rounded-3xl overflow-hidden group shadow-sm hover:shadow-xl transition-all duration-300 ${service.gridClass}`}
               >
                 
-                {/* Core Thumbnail Graphic */}
+                {/* Background Image */}
                 <img 
-                  src={city.image} 
-                  alt={`${city.name} GTA neighborhood panorama`}
+                  src={service.image} 
+                  alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
 
-                {/* Gradient Layer Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/40 to-transparent transition-opacity duration-300 group-hover:opacity-95" />
+                {/* Dark Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2b4b46]/95 via-[#2b4b46]/60 to-transparent transition-opacity duration-300 group-hover:opacity-95" />
 
-                {/* Content Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 z-10 flex flex-col items-start text-left max-w-xl">
-                  <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-wide mb-2 transition-colors group-hover:text-[#F9F6F0]">
-                    {city.name}
+                {/* Card Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 z-10 flex flex-col items-start text-left max-w-2xl">
+                  <span className="bg-[#e9b3b0] text-[#2b4b46] text-[9px] sm:text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 shadow-sm">
+                    {service.category}
+                  </span>
+                  <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-wide mb-2 transition-colors group-hover:text-[#e9b3b0]">
+                    {service.title}
                   </h3>
-                  <p className="text-[#F9F6F0]/80 text-xs sm:text-sm font-light leading-relaxed drop-shadow-sm">
-                    {city.desc}
+                  <p className="text-[#F9F6F0]/85 text-xs sm:text-sm font-light leading-relaxed drop-shadow-sm">
+                    {service.desc}
                   </p>
                 </div>
 

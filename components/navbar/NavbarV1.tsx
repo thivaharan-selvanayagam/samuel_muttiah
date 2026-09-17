@@ -9,13 +9,12 @@ import { BRAND_CONFIG } from "@/config/brand";
 const navItems = [
   // --- LEFT WING MENUS ---
   { label: "Home", href: "/" },
-  { label: "Meet RealtHer", href: "/about" },
+  { label: "About Samuel", href: "/about" },
   { 
     label: "Buyer", 
     subItems: [
-      { label: "Home Search", href: "/all-homes" },
-      { label: "Our Listings", href: "/all-homes" },
-      { label: "Buyer's Guide", href: "/buyers-guide" },
+      { label: "Property Search", href: "/all-homes" },
+      { label: "Cross-Border Guide", href: "/buyers-guide" },
     ] 
   },
   
@@ -32,7 +31,7 @@ const navItems = [
     subItems: [
       { label: "Calculator", href: "/calculator" },
       { label: "Testimonials", href: "/testimonials" },
-      { label: "Neighbourhoods", href: "/neighbourhoods" },
+      { label: "SoCal Markets", href: "/neighbourhoods" },
     ] 
   },
 ];
@@ -45,15 +44,15 @@ export default function NavbarV1({ scrolled, isHome }: any) {
   const leftLinks = navItems.slice(0, 3);
   const rightLinks = navItems.slice(3, 5);
 
-  const textHoverAccent = "hover:text-[#4D71A3]";
-  const textActiveAccent = "text-[#4D71A3]";
+  const textHoverAccent = "hover:text-[#e9b3b0]";
+  const textActiveAccent = "text-[#e9b3b0]";
 
-  // Responsive geometry: Rounded-2xl on mobile prevents curved clipping; rounded-full on desktop
-  const stickyStyles = "bg-slate-950/95 backdrop-blur-md rounded-2xl lg:rounded-full shadow-2xl py-2.5 lg:py-3 mt-2 lg:mt-3 max-w-[calc(100%-1.25rem)] lg:max-w-[calc(100%-2rem)] mx-auto left-2.5 right-2.5 lg:left-4 lg:right-4 border border-white/15 text-white";
+  // Geometry and styling matched to Samuel's Deep Green palette (#2b4b46)
+  const stickyStyles = "bg-[#2b4b46]/95 backdrop-blur-md rounded-2xl lg:rounded-full shadow-2xl py-2.5 lg:py-3 mt-2 lg:mt-3 max-w-[calc(100%-1.25rem)] lg:max-w-[calc(100%-2rem)] mx-auto left-2.5 right-2.5 lg:left-4 lg:right-4 border border-white/15 text-white";
   
   const defaultStyles = isHome 
     ? "bg-transparent text-white py-4 lg:py-5 left-0 right-0" 
-    : "bg-slate-950 text-white border-b border-white/10 py-3.5 lg:py-5 left-0 right-0";
+    : "bg-[#2b4b46] text-white border-b border-white/10 py-3.5 lg:py-5 left-0 right-0";
 
   const toggleMobileSubMenu = (label: string) => {
     setOpenMobileMenus(prev => ({ ...prev, [label]: !prev[label] }));
@@ -73,15 +72,15 @@ export default function NavbarV1({ scrolled, isHome }: any) {
                 item.subItems ? (
                   <div key={item.label} className="relative group">
                     <button className={`flex items-center gap-1.5 text-xs xl:text-sm font-semibold tracking-wider uppercase transition-colors duration-200 text-white/90 ${textHoverAccent}`}>
-                      {item.label} <ChevronDown size={14} className="transition-transform duration-300 group-hover:-rotate-180 text-stone-400" />
+                      {item.label} <ChevronDown size={14} className="transition-transform duration-300 group-hover:-rotate-180 text-[#e9b3b0]" />
                     </button>
                     <div className="absolute left-0 top-full pt-4 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300">
-                      <div className="bg-slate-900 rounded-2xl shadow-2xl border border-white/15 p-2 min-w-[210px] flex flex-col gap-1 text-left">
+                      <div className="bg-[#1f3733] rounded-2xl shadow-2xl border border-white/15 p-2 min-w-[210px] flex flex-col gap-1 text-left">
                         {item.subItems.map((sub) => (
                           <Link 
                             key={sub.label} 
                             href={sub.href} 
-                            className="hover:bg-slate-800 px-4 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider transition-colors text-white/90 hover:text-white"
+                            className="hover:bg-[#2b4b46] px-4 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider transition-colors text-white/90 hover:text-white"
                           >
                             {sub.label}
                           </Link>
@@ -113,8 +112,8 @@ export default function NavbarV1({ scrolled, isHome }: any) {
                     />
                   </div>
                 ) : (
-                  <span className="text-2xl lg:text-3xl font-bold tracking-widest font-display text-white transition-colors duration-300">
-                    REALTHER<span className="text-[#4D71A3]">.</span>
+                  <span className="text-xl lg:text-2xl font-bold tracking-widest font-display text-white transition-colors duration-300">
+                    SAMUEL MUTTIAH<span className="text-[#e9b3b0]">.</span>
                   </span>
                 )}
               </Link>
@@ -127,15 +126,15 @@ export default function NavbarV1({ scrolled, isHome }: any) {
                   item.subItems ? (
                     <div key={item.label} className="relative group">
                       <button className={`flex items-center gap-1.5 text-xs xl:text-sm font-semibold tracking-wider uppercase transition-colors duration-200 text-white/90 ${textHoverAccent}`}>
-                        {item.label} <ChevronDown size={14} className="transition-transform duration-300 group-hover:-rotate-180 text-stone-400" />
+                        {item.label} <ChevronDown size={14} className="transition-transform duration-300 group-hover:-rotate-180 text-[#e9b3b0]" />
                       </button>
                       <div className="absolute left-0 top-full pt-4 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300">
-                        <div className="bg-slate-900 rounded-2xl shadow-2xl border border-white/15 p-2 min-w-[210px] flex flex-col gap-1 text-left">
+                        <div className="bg-[#1f3733] rounded-2xl shadow-2xl border border-white/15 p-2 min-w-[210px] flex flex-col gap-1 text-left">
                           {item.subItems.map((sub) => (
                             <Link 
                               key={sub.label} 
                               href={sub.href} 
-                              className="hover:bg-slate-800 px-4 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider transition-colors text-white/90 hover:text-white"
+                              className="hover:bg-[#2b4b46] px-4 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider transition-colors text-white/90 hover:text-white"
                             >
                               {sub.label}
                             </Link>
@@ -158,7 +157,7 @@ export default function NavbarV1({ scrolled, isHome }: any) {
               {/* Action Button */}
               <Link 
                 href="/contact" 
-                className="text-xs font-semibold tracking-wider uppercase px-6 py-3 rounded-full transition-all duration-300 border border-white/30 text-white bg-white/10 hover:bg-white hover:text-slate-950 shadow-sm whitespace-nowrap font-sans"
+                className="text-xs font-semibold tracking-wider uppercase px-6 py-3 rounded-full transition-all duration-300 border border-white/30 text-[#2b4b46] bg-[#e9b3b0] hover:bg-white shadow-sm whitespace-nowrap font-sans"
               >
                 Let's Connect
               </Link>
@@ -166,12 +165,11 @@ export default function NavbarV1({ scrolled, isHome }: any) {
 
           </div>
 
-          {/* MOBILE RESPONSIVE HEADER (FIXED ALIGNMENT) */}
+          {/* MOBILE RESPONSIVE HEADER */}
           <div className="flex lg:hidden items-center justify-between w-full px-2">
             <Link href="/" className="flex items-center group shrink-0">
               {BRAND_CONFIG.meta.logoSvgPath ? (
-                /* Auto-scaled mobile logo bounds: fits inside floating bar cleanly without clipping */
-                <div className="relative h-10 sm:h-16 w-auto max-w-[180px] sm:max-w-[220px] flex items-center transition-opacity duration-300 group-hover:opacity-85">
+                <div className="relative h-10 sm:h-14 w-auto max-w-[180px] sm:max-w-[220px] flex items-center transition-opacity duration-300 group-hover:opacity-85">
                   <img 
                     src={BRAND_CONFIG.meta.logoSvgPath} 
                     alt={`${BRAND_CONFIG.meta.siteName} Mobile Logo`}
@@ -179,14 +177,14 @@ export default function NavbarV1({ scrolled, isHome }: any) {
                   />
                 </div>
               ) : (
-                <span className="text-xl sm:text-2xl font-bold tracking-widest font-display text-white">
-                  REALTHER<span className="text-[#4D71A3]">.</span>
+                <span className="text-lg sm:text-xl font-bold tracking-widest font-display text-white">
+                  SAMUEL MUTTIAH<span className="text-[#e9b3b0]">.</span>
                 </span>
               )}
             </Link>
             
             <button 
-              className="p-2 text-white hover:text-[#4D71A3] transition-colors shrink-0 flex items-center justify-center" 
+              className="p-2 text-white hover:text-[#e9b3b0] transition-colors shrink-0 flex items-center justify-center" 
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
             >
@@ -199,7 +197,7 @@ export default function NavbarV1({ scrolled, isHome }: any) {
 
       {/* MOBILE DRAWER OVERLAY */}
       {mobileOpen && (
-        <div className="lg:hidden px-6 py-8 border-t border-white/10 shadow-2xl bg-slate-950 text-white overflow-y-auto max-h-[85vh] mt-2 rounded-b-2xl">
+        <div className="lg:hidden px-6 py-8 border-t border-white/10 shadow-2xl bg-[#2b4b46] text-white overflow-y-auto max-h-[85vh] mt-2 rounded-b-2xl">
           <nav className="flex flex-col gap-3">
             {navItems.map((item) => (
               <div key={item.label} className="border-b border-white/10 pb-2">
@@ -240,7 +238,7 @@ export default function NavbarV1({ scrolled, isHome }: any) {
             ))}
             <Link 
               href="/contact" 
-              className="text-slate-950 bg-[#F9F6F0] hover:bg-white text-xs font-semibold uppercase tracking-wider text-center py-4 rounded-full mt-6 transition-all font-sans" 
+              className="text-[#2b4b46] bg-[#e9b3b0] hover:bg-white text-xs font-semibold uppercase tracking-wider text-center py-4 rounded-full mt-6 transition-all font-sans" 
               onClick={() => setMobileOpen(false)}
             >
               Let's Connect

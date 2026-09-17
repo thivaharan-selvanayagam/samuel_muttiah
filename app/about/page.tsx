@@ -1,39 +1,51 @@
 import Link from "next/link";
-import { ArrowDown, ShieldCheck, MapPin, Handshake, TrendingUp, Building2, Key } from "lucide-react";
+import { 
+  ArrowDown, 
+  Globe, 
+  ShieldCheck, 
+  Building2, 
+  TrendingUp, 
+  CheckCircle2, 
+  Car, 
+  Truck, 
+  FileText, 
+  DollarSign, 
+  Landmark 
+} from "lucide-react";
 import GetInTouch from "@/components/GetInTouch";
 import { BRAND_CONFIG } from "@/config/brand";
 
 export const metadata = { 
-  title: `Meet RealtHer Group | Reema Shahzad & Pirasha Vygunthavasa` 
+  title: `About Samuel Muttiah | Transition Realtor | Canada to Southern California` 
 };
 
 export default function AboutPage() {
   return (
     <>
       {/* 1. HERO SECTION */}
-      <section className="relative h-[65vh] lg:h-[75vh] flex flex-col items-center justify-center bg-slate-950 overflow-hidden pt-20">
+      <section className="relative h-[65vh] lg:h-[75vh] flex flex-col items-center justify-center bg-[#2b4b46] overflow-hidden pt-20 text-left">
         <div className="absolute inset-0 z-0">
           <img 
-            src={BRAND_CONFIG.meta.coverImage || "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000"}
-            alt="RealtHer Group GTA Real Estate Background"
-            className="w-full h-full object-cover opacity-35"
+            src="https://images.unsplash.com/photo-1580655653885-65763b2597d0?q=80&w=2000&auto=format&fit=crop"
+            alt="Southern California Real Estate Landscape"
+            className="w-full h-full object-cover opacity-25"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#2b4b46]/90 via-[#2b4b46]/75 to-[#2b4b46]" />
         </div>
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto w-full mt-10">
-          <div className="inline-block bg-[#4D71A3] text-white text-[10px] md:text-xs font-semibold tracking-widest uppercase px-5 py-2 rounded-full mb-6 shadow-md">
-            Greater Toronto Area Real Estate Brokers
+          <div className="inline-block bg-[#e9b3b0] text-[#2b4b46] text-[10px] md:text-xs font-semibold tracking-widest uppercase px-5 py-2 rounded-full mb-6 shadow-md">
+            Canada to Southern California Transition Realtor
           </div>
           <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight animate-fade-up uppercase leading-[1.1]">
-            Meet RealtHer Group
+            Samuel Muttiah
           </h1>
           <p className="mt-4 text-[#F9F6F0]/90 text-base md:text-xl font-light max-w-2xl mx-auto">
-            Strategic guidance. Local GTA expertise. A smarter move.
+            Guiding your cross-border move with 10+ years of dual-market experience, clarity, and confidence.
           </p>
           <div className="mt-10 animate-fade-up delay-200">
             <Link 
-              className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-white/30 text-white hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-lg" 
+              className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-white/30 text-white hover:bg-[#e9b3b0] hover:text-[#2b4b46] transition-all duration-300 shadow-lg" 
               href="#story"
             >
               <ArrowDown size={20} />
@@ -42,113 +54,108 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. OUR STORY (Official Copy Block) */}
+      {/* 2. ABOUT SAMUEL & DUAL-MARKET STORY */}
       <section id="story" className="py-20 lg:py-32 bg-[#FDFBF7]">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
             
-            {/* Left Sticky Header */}
+            {/* Left Column: Portrait & Quick Stats */}
             <div className="lg:col-span-5 lg:sticky lg:top-32 flex flex-col items-start text-left">
-              <div className="bg-stone-200/60 text-stone-900 text-[10px] md:text-xs font-semibold tracking-widest uppercase px-5 py-2 rounded-full mb-6 shadow-sm border border-stone-300/40">
-                Our Foundation
+              <div className="bg-[#2b4b46]/10 text-[#2b4b46] text-[10px] md:text-xs font-semibold tracking-widest uppercase px-5 py-2 rounded-full mb-6 shadow-sm border border-[#2b4b46]/20">
+                Cross-Border Real Estate Specialist
               </div>
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.15] tracking-tight mb-6">
-                Real Estate, Done Differently.
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2b4b46] leading-[1.15] tracking-tight mb-6">
+                More Than a Move—It’s a Life Transition.
               </h2>
               <p className="text-stone-600 text-sm md:text-base leading-relaxed font-normal mb-8">
-                At The RealtHer Group, we believe finding the right property is about more than buying a house — it’s about finding a place to call home and making real estate decisions that support your future.
+                Helping clients seamlessly relocate between Canada and Southern California with specialized market, legal, and lifestyle insight.
               </p>
               
-              <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-stone-200/80">
+              <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-xl border border-stone-200/80">
                 <img 
-                  src={BRAND_CONFIG.agent.fullphoto || "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"} 
-                  alt="Reema Shahzad and Pirasha Vygunthavasa" 
+                  src={BRAND_CONFIG.agent.fullphoto || "/images/sam.jpeg"} 
+                  alt="Samuel Muttiah - Transition Realtor" 
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
 
-            {/* Right Content Story Body */}
-            <div className="lg:col-span-7 flex flex-col gap-10 text-stone-700 text-sm md:text-base leading-relaxed font-normal">
+            {/* Right Column: Narrative Body */}
+            <div className="lg:col-span-7 flex flex-col gap-10 text-stone-700 text-sm md:text-base leading-relaxed font-normal text-left">
               
               <div className="bg-white p-8 sm:p-10 rounded-3xl border border-stone-200/80 shadow-sm space-y-6">
-                <h3 className="font-display text-2xl font-bold text-slate-900 tracking-tight">
-                  Two Experienced Brokers. One Vision.
+                <h3 className="font-display text-2xl font-bold text-[#2b4b46] tracking-tight">
+                  Dual-Market Experience You Can Trust
                 </h3>
                 
                 <p>
-                  Led by experienced real estate professionals <strong>Pirasha Vygunthavasa</strong> and <strong>Reema Shahzad</strong>, our team brings together years of industry knowledge, market expertise, and a genuine passion for helping people achieve their real estate goals.
+                  As a specialized <strong>Transition Realtor</strong>, I help clients navigate the complexities of moving from Canada to Southern California, guiding them through every step of buying, selling, and investing in U.S. real estate.
                 </p>
                 
                 <p>
-                  With Pirasha’s experience as an award-winning RE/MAX Real Estate Broker and a professional home matchmaker since 2004, combined with Reema’s expertise as a Real Estate Broker and investor, clients benefit from a well-rounded perspective on today’s market.
+                  With over <strong>10 years of experience</strong> in the real estate industry, I’ve had the unique advantage of working as a Realtor in both the <strong>Greater Toronto Area (GTA)</strong> and the <strong>Greater Los Angeles Area</strong>. This dual-market experience allows me to understand not only the differences between Canadian and U.S. real estate systems, but also the financial, legal, and lifestyle considerations that come with cross-border moves.
                 </p>
 
                 <p>
-                  The RealtHer Group specializes in <strong>pre-construction and residential sales</strong>, helping buyers, sellers, homeowners, and investors navigate the Greater Toronto Area real estate market with confidence.
+                  Whether you’re relocating for business, lifestyle, or investment opportunities, I act as your single point of contact—coordinating the real estate process while connecting you with trusted professionals to support your transition.
                 </p>
 
-                <p>
-                  Whether you’re searching for your dream home, selling a property, exploring pre-construction opportunities, or looking to build your real estate portfolio, we’re here to make the process seamless, strategic, and personalized.
-                </p>
+                <div className="pt-4 border-t border-stone-100">
+                  <h4 className="font-bold text-[#2b4b46] text-base mb-3">Proven Track Record In:</h4>
+                  <ul className="grid sm:grid-cols-3 gap-3 text-xs font-semibold text-stone-700">
+                    <li className="flex items-center gap-2 bg-[#FDFBF7] p-3 rounded-xl border border-stone-200">
+                      <CheckCircle2 size={16} className="text-[#2b4b46]" /> Residential Sales
+                    </li>
+                    <li className="flex items-center gap-2 bg-[#FDFBF7] p-3 rounded-xl border border-stone-200">
+                      <CheckCircle2 size={16} className="text-[#2b4b46]" /> Commercial Real Estate
+                    </li>
+                    <li className="flex items-center gap-2 bg-[#FDFBF7] p-3 rounded-xl border border-stone-200">
+                      <CheckCircle2 size={16} className="text-[#2b4b46]" /> Cross-Border Investing
+                    </li>
+                  </ul>
+                </div>
 
-                <p className="pt-2 text-slate-900 font-semibold text-base sm:text-lg border-t border-stone-100">
-                  Your goals are our priority. Your next move starts with The RealtHer Group.
+                <p className="pt-2 text-[#2b4b46] font-semibold text-base sm:text-lg border-t border-stone-100">
+                  Affiliated with Keller Williams Beverly Hills—giving clients access to a premier global network and deep local market expertise throughout Southern California.
                 </p>
               </div>
 
-              {/* SIX CORE HIGHLIGHT PILLARS */}
+              {/* CORE HIGHLIGHT PILLARS */}
               <div>
-                <h3 className="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-8 tracking-tight">
-                  What Sets Us Apart
+                <h3 className="font-display text-2xl sm:text-3xl font-bold text-[#2b4b46] mb-8 tracking-tight">
+                  Why Work With Samuel?
                 </h3>
                 
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm">
-                    <MapPin size={22} className="text-[#4D71A3] mb-3" />
-                    <h4 className="font-bold text-slate-900 text-base mb-1">GTA Expertise</h4>
+                    <Globe size={24} className="text-[#2b4b46] mb-3" />
+                    <h4 className="font-bold text-[#2b4b46] text-base mb-1">Dual-Market Expertise</h4>
                     <p className="text-xs text-stone-600 leading-relaxed">
-                      Deep hyper-local insights spanning Toronto, Durham, York, and Peel regions.
+                      Deep familiarity with both Canadian real estate frameworks and Southern California market dynamics.
                     </p>
                   </div>
 
                   <div className="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm">
-                    <Building2 size={22} className="text-[#4D71A3] mb-3" />
-                    <h4 className="font-bold text-slate-900 text-base mb-1">Pre-Construction Specialization</h4>
+                    <Building2 size={24} className="text-[#2b4b46] mb-3" />
+                    <h4 className="font-bold text-[#2b4b46] text-base mb-1">KW Beverly Hills Access</h4>
                     <p className="text-xs text-stone-600 leading-relaxed">
-                      VIP access, builder allocation guidance, and floor plan analysis.
+                      Backed by one of the world's top real estate brokerages with prime access across Los Angeles.
                     </p>
                   </div>
 
                   <div className="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm">
-                    <Key size={22} className="text-[#4D71A3] mb-3" />
-                    <h4 className="font-bold text-slate-900 text-base mb-1">Resale Strategy</h4>
+                    <TrendingUp size={24} className="text-[#2b4b46] mb-3" />
+                    <h4 className="font-bold text-[#2b4b46] text-base mb-1">Cross-Border Investing</h4>
                     <p className="text-xs text-stone-600 leading-relaxed">
-                      Targeted pricing, property presentation, and seamless transaction management.
+                      Identifying high-yielding residential and commercial investment properties on both sides of the border.
                     </p>
                   </div>
 
                   <div className="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm">
-                    <TrendingUp size={22} className="text-[#4D71A3] mb-3" />
-                    <h4 className="font-bold text-slate-900 text-base mb-1">Investment Advisory</h4>
+                    <ShieldCheck size={24} className="text-[#2b4b46] mb-3" />
+                    <h4 className="font-bold text-[#2b4b46] text-base mb-1">Single Point of Contact</h4>
                     <p className="text-xs text-stone-600 leading-relaxed">
-                      Evaluating real numbers, cash flow potential, and long-term equity growth.
-                    </p>
-                  </div>
-
-                  <div className="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm">
-                    <Handshake size={22} className="text-[#4D71A3] mb-3" />
-                    <h4 className="font-bold text-slate-900 text-base mb-1">Tenacious Negotiation</h4>
-                    <p className="text-xs text-stone-600 leading-relaxed">
-                      Client-first advocacy designed to maximize value and protect your bottom line.
-                    </p>
-                  </div>
-
-                  <div className="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm">
-                    <ShieldCheck size={22} className="text-[#4D71A3] mb-3" />
-                    <h4 className="font-bold text-slate-900 text-base mb-1">Matchmaking Precision</h4>
-                    <p className="text-xs text-stone-600 leading-relaxed">
-                      Two decades of connecting buyers with properties that fit their lifestyle perfectly.
+                      Seamlessly coordinating your transaction, movers, attorneys, and financial advisors under one roof.
                     </p>
                   </div>
                 </div>
@@ -160,88 +167,102 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 3. INDIVIDUAL BIOS: PIRASHA & REEMA */}
+      {/* 3. CANADA-TO-U.S. TRANSITION SUPPORT CHECKLIST */}
       <section className="py-20 lg:py-28 bg-white border-y border-stone-200/80">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="bg-[#4D71A3] text-white text-[10px] md:text-xs font-semibold tracking-widest uppercase px-5 py-2 rounded-full mb-5 w-fit mx-auto shadow-sm">
-              Founding Leadership
+            <div className="bg-[#e9b3b0] text-[#2b4b46] text-[10px] md:text-xs font-semibold tracking-widest uppercase px-5 py-2 rounded-full mb-5 w-fit mx-auto shadow-sm">
+              Comprehensive Relocation Services
             </div>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight">
-              Meet the Brokers
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[#2b4b46] tracking-tight">
+              Canada-to-U.S. Transition Checklist
             </h2>
+            <p className="mt-4 text-stone-600 text-sm md:text-base font-normal max-w-xl mx-auto">
+              To make your transition seamless, Samuel provides direct access to a trusted ecosystem of specialized cross-border professionals.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
             
-            {/* BIO 1: PIRASHA VYGUNTHAVASA */}
-            <div className="bg-[#FDFBF7] rounded-3xl p-8 sm:p-10 border border-stone-200/80 shadow-sm flex flex-col justify-between">
+            {/* Item 1 */}
+            <div className="bg-[#FDFBF7] rounded-3xl p-8 border border-stone-200/80 shadow-sm flex flex-col justify-between">
               <div>
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-slate-900 text-[#F9F6F0] font-bold text-xl flex items-center justify-center shrink-0">
-                    PV
-                  </div>
-                  <div>
-                    <h3 className="font-display text-2xl font-bold text-slate-900">Pirasha Vygunthavasa</h3>
-                    <p className="text-[#4D71A3] text-xs font-semibold uppercase tracking-wider mt-1">
-                      Award-Winning RE/MAX Real Estate Broker
-                    </p>
-                  </div>
+                <div className="w-12 h-12 rounded-2xl bg-[#2b4b46] text-[#e9b3b0] flex items-center justify-center mb-6">
+                  <FileText size={24} />
                 </div>
-                
-                <p className="text-stone-600 text-sm leading-relaxed mb-6 font-normal">
-                  A professional home matchmaker since 2004, Pirasha brings over two decades of hands-on GTA market excellence. Her deep understanding of residential sales, pre-construction opportunities, and client relationship management ensures that every transaction is smooth and tailored to your needs.
+                <h3 className="font-display text-xl font-bold text-[#2b4b46] mb-2">Immigration Attorneys</h3>
+                <p className="text-stone-600 text-xs leading-relaxed font-normal">
+                  Expert guidance on visas, work permits, cross-border residency considerations, and legal requirements.
                 </p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="px-3 py-1 bg-white border border-stone-200 text-stone-700 text-xs rounded-full font-medium">Since 2004</span>
-                  <span className="px-3 py-1 bg-white border border-stone-200 text-stone-700 text-xs rounded-full font-medium">Pre-Construction</span>
-                  <span className="px-3 py-1 bg-white border border-stone-200 text-stone-700 text-xs rounded-full font-medium">Matchmaking</span>
-                  <span className="px-3 py-1 bg-white border border-stone-200 text-stone-700 text-xs rounded-full font-medium">GTA Resale</span>
-                </div>
               </div>
-
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center justify-center bg-slate-900 text-[#F9F6F0] hover:bg-slate-800 px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors w-fit"
-              >
-                Connect with Pirasha
-              </Link>
             </div>
 
-            {/* BIO 2: REEMA SHAHZAD */}
-            <div className="bg-[#FDFBF7] rounded-3xl p-8 sm:p-10 border border-stone-200/80 shadow-sm flex flex-col justify-between">
+            {/* Item 2 */}
+            <div className="bg-[#FDFBF7] rounded-3xl p-8 border border-stone-200/80 shadow-sm flex flex-col justify-between">
               <div>
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-slate-900 text-[#F9F6F0] font-bold text-xl flex items-center justify-center shrink-0">
-                    RS
-                  </div>
-                  <div>
-                    <h3 className="font-display text-2xl font-bold text-slate-900">Reema Shahzad</h3>
-                    <p className="text-[#4D71A3] text-xs font-semibold uppercase tracking-wider mt-1">
-                      Real Estate Broker & Active Investor
-                    </p>
-                  </div>
+                <div className="w-12 h-12 rounded-2xl bg-[#2b4b46] text-[#e9b3b0] flex items-center justify-center mb-6">
+                  <Car size={24} />
                 </div>
-                
-                <p className="text-stone-600 text-sm leading-relaxed mb-6 font-normal">
-                  Combining her background as a Real Estate Broker and active investor, Reema offers clients a sharp, analytical perspective on property values, market trends, and long-term equity growth. She works closely with buyers, sellers, and investors to build solid real estate strategies.
+                <h3 className="font-display text-xl font-bold text-[#2b4b46] mb-2">Vehicle Import Specialists</h3>
+                <p className="text-stone-600 text-xs leading-relaxed font-normal">
+                  Safe, insured, and compliant transport of your personal vehicles from Canada to the United States.
                 </p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="px-3 py-1 bg-white border border-stone-200 text-stone-700 text-xs rounded-full font-medium">Investment Specialist</span>
-                  <span className="px-3 py-1 bg-white border border-stone-200 text-stone-700 text-xs rounded-full font-medium">Market Analytics</span>
-                  <span className="px-3 py-1 bg-white border border-stone-200 text-stone-700 text-xs rounded-full font-medium">Seller Strategy</span>
-                  <span className="px-3 py-1 bg-white border border-stone-200 text-stone-700 text-xs rounded-full font-medium">Negotiation</span>
-                </div>
               </div>
+            </div>
 
+            {/* Item 3 */}
+            <div className="bg-[#FDFBF7] rounded-3xl p-8 border border-stone-200/80 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-2xl bg-[#2b4b46] text-[#e9b3b0] flex items-center justify-center mb-6">
+                  <Truck size={24} />
+                </div>
+                <h3 className="font-display text-xl font-bold text-[#2b4b46] mb-2">Cross-Border Movers</h3>
+                <p className="text-stone-600 text-xs leading-relaxed font-normal">
+                  Vetted international moving companies experienced in border logistics, customs documentation, and delivery.
+                </p>
+              </div>
+            </div>
+
+            {/* Item 4 */}
+            <div className="bg-[#FDFBF7] rounded-3xl p-8 border border-stone-200/80 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-2xl bg-[#2b4b46] text-[#e9b3b0] flex items-center justify-center mb-6">
+                  <DollarSign size={24} />
+                </div>
+                <h3 className="font-display text-xl font-bold text-[#2b4b46] mb-2">U.S. Tax & Accountants</h3>
+                <p className="text-stone-600 text-xs leading-relaxed font-normal">
+                  Cross-border tax advisors specializing in dual-country reporting, estate planning, and financial structuring.
+                </p>
+              </div>
+            </div>
+
+            {/* Item 5 */}
+            <div className="bg-[#FDFBF7] rounded-3xl p-8 border border-stone-200/80 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-2xl bg-[#2b4b46] text-[#e9b3b0] flex items-center justify-center mb-6">
+                  <Landmark size={24} />
+                </div>
+                <h3 className="font-display text-xl font-bold text-[#2b4b46] mb-2">Lenders & Financing</h3>
+                <p className="text-stone-600 text-xs leading-relaxed font-normal">
+                  Cross-border mortgage specialists and U.S. financial institutions to secure competitive home financing.
+                </p>
+              </div>
+            </div>
+
+            {/* Item 6 - CTA Box */}
+            <div className="bg-[#2b4b46] text-white rounded-3xl p-8 shadow-md flex flex-col justify-between">
+              <div>
+                <h3 className="font-display text-xl font-bold mb-2">Planning Your Move?</h3>
+                <p className="text-stone-300 text-xs leading-relaxed font-light mb-6">
+                  Schedule a private consultation to receive your customized cross-border relocation strategy call.
+                </p>
+              </div>
               <Link 
-                href="/contact" 
-                className="inline-flex items-center justify-center bg-slate-900 text-[#F9F6F0] hover:bg-slate-800 px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors w-fit"
+                href="/contact"
+                className="bg-[#e9b3b0] text-[#2b4b46] hover:bg-white text-xs font-semibold uppercase tracking-wider text-center py-3 rounded-full transition-all"
               >
-                Connect with Reema
+                Request Transition Guide
               </Link>
             </div>
 
@@ -254,24 +275,24 @@ export default function AboutPage() {
       <section className="relative h-[380px] md:h-[480px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2000" 
-            alt="GTA Property Overview"
+            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2000&auto=format&fit=crop" 
+            alt="Southern California Luxury Home"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-slate-950/75" />
+          <div className="absolute inset-0 bg-[#2b4b46]/85" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
           <h2 className="font-display text-3xl md:text-5xl font-bold text-white tracking-tight mb-6 uppercase">
-            Ready to Start Your Next Move?
+            Ready for Your Southern California Transition?
           </h2>
           <p className="text-[#F9F6F0]/90 text-sm md:text-base font-light mb-8 max-w-xl mx-auto">
-            Get in touch with Reema and Pirasha today for personalized guidance tailored to your real estate goals.
+            Connect with Samuel Muttiah today for experienced, transparent, and results-driven real estate guidance.
           </p>
           <Link 
-            className="inline-flex items-center gap-2 bg-[#4D71A3] text-white hover:bg-[#3B5B88] px-8 py-4 rounded-full text-xs font-semibold tracking-wider uppercase transition-all shadow-xl font-sans" 
+            className="inline-flex items-center gap-2 bg-[#e9b3b0] text-[#2b4b46] hover:bg-white px-8 py-4 rounded-full text-xs font-semibold tracking-wider uppercase transition-all shadow-xl font-sans" 
             href="/contact"
           >
-            Work With RealtHer Group
+            Start Your Move With Samuel
           </Link>
         </div>
       </section>
