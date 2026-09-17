@@ -9,7 +9,7 @@ import { BRAND_CONFIG } from "@/config/brand";
 const navItems = [
   // --- LEFT WING MENUS ---
   { label: "Home", href: "/" },
-  { label: "Listings", href: "/all-homes" },
+  { label: "About", href: "/about" },
   { label: "Buyer Guide", href: "/buyers-guide" },
   
   // --- RIGHT WING MENUS ---
@@ -18,8 +18,7 @@ const navItems = [
     label: "Resources", 
     subItems: [
       { label: "Mortgage Calculator", href: "/calculator" },
-      { label: "SoCal Markets", href: "/neighbourhoods" },
-      { label: "Client Testimonials", href: "/testimonials" },
+     
     ] 
   },
 ];
