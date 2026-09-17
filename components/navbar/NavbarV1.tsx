@@ -9,29 +9,17 @@ import { BRAND_CONFIG } from "@/config/brand";
 const navItems = [
   // --- LEFT WING MENUS ---
   { label: "Home", href: "/" },
-  { label: "About Samuel", href: "/about" },
-  { 
-    label: "Buyer", 
-    subItems: [
-      { label: "Property Search", href: "/all-homes" },
-      { label: "Cross-Border Guide", href: "/buyers-guide" },
-    ] 
-  },
+  { label: "Listings", href: "/all-homes" },
+  { label: "Buyer Guide", href: "/buyers-guide" },
   
   // --- RIGHT WING MENUS ---
+  { label: "Seller Guide", href: "/sellers-guide" },
   { 
-    label: "Seller", 
+    label: "Resources", 
     subItems: [
-      { label: "Home Evaluation", href: "/home-evaluation" },
-      { label: "Seller's Guide", href: "/sellers-guide" },
-    ] 
-  },
-  { 
-    label: "More", 
-    subItems: [
-      { label: "Calculator", href: "/calculator" },
-      { label: "Testimonials", href: "/testimonials" },
+      { label: "Mortgage Calculator", href: "/calculator" },
       { label: "SoCal Markets", href: "/neighbourhoods" },
+      { label: "Client Testimonials", href: "/testimonials" },
     ] 
   },
 ];
@@ -47,7 +35,6 @@ export default function NavbarV1({ scrolled, isHome }: any) {
   const textHoverAccent = "hover:text-[#e9b3b0]";
   const textActiveAccent = "text-[#e9b3b0]";
 
-  // Geometry and styling matched to Samuel's Deep Green palette (#2b4b46)
   const stickyStyles = "bg-[#2b4b46]/95 backdrop-blur-md rounded-2xl lg:rounded-full shadow-2xl py-2.5 lg:py-3 mt-2 lg:mt-3 max-w-[calc(100%-1.25rem)] lg:max-w-[calc(100%-2rem)] mx-auto left-2.5 right-2.5 lg:left-4 lg:right-4 border border-white/15 text-white";
   
   const defaultStyles = isHome 
@@ -100,7 +87,7 @@ export default function NavbarV1({ scrolled, isHome }: any) {
               ))}
             </nav>
 
-            {/* DESKTOP LOGO: PROMINENT & CENTERED */}
+            {/* DESKTOP LOGO (CLEAN IMAGE DISPLAY) */}
             <div className="col-span-2 flex justify-center z-10">
               <Link href="/" className="flex items-center justify-center group">
                 {BRAND_CONFIG.meta.logoSvgPath ? (
@@ -108,7 +95,7 @@ export default function NavbarV1({ scrolled, isHome }: any) {
                     <img 
                       src={BRAND_CONFIG.meta.logoSvgPath} 
                       alt={`${BRAND_CONFIG.meta.siteName} Logo`}
-                      className="h-full w-auto max-h-full object-contain brightness-0 invert" 
+                      className="h-full w-auto max-h-full object-contain" 
                     />
                   </div>
                 ) : (
@@ -157,9 +144,9 @@ export default function NavbarV1({ scrolled, isHome }: any) {
               {/* Action Button */}
               <Link 
                 href="/contact" 
-                className="text-xs font-semibold tracking-wider uppercase px-6 py-3 rounded-full transition-all duration-300 border border-white/30 text-[#2b4b46] bg-[#e9b3b0] hover:bg-white shadow-sm whitespace-nowrap font-sans"
+                className={`text-xs font-semibold tracking-wider uppercase px-6 py-3 rounded-full transition-all duration-300 border border-white/30 text-[#2b4b46] bg-[#e9b3b0] hover:bg-white shadow-sm whitespace-nowrap font-sans ${pathname === "/contact" ? "ring-2 ring-white" : ""}`}
               >
-                Let's Connect
+                Contact
               </Link>
             </nav>
 
@@ -173,7 +160,7 @@ export default function NavbarV1({ scrolled, isHome }: any) {
                   <img 
                     src={BRAND_CONFIG.meta.logoSvgPath} 
                     alt={`${BRAND_CONFIG.meta.siteName} Mobile Logo`}
-                    className="h-full w-auto max-h-full object-contain brightness-0 invert" 
+                    className="h-full w-auto max-h-full object-contain" 
                   />
                 </div>
               ) : (
@@ -241,7 +228,7 @@ export default function NavbarV1({ scrolled, isHome }: any) {
               className="text-[#2b4b46] bg-[#e9b3b0] hover:bg-white text-xs font-semibold uppercase tracking-wider text-center py-4 rounded-full mt-6 transition-all font-sans" 
               onClick={() => setMobileOpen(false)}
             >
-              Let's Connect
+              Contact
             </Link>
           </nav>
         </div>

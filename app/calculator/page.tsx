@@ -2,28 +2,28 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Calculator, Calendar } from "lucide-react";
+import { ArrowRight, Calculator } from "lucide-react";
 import GetInTouch from "@/components/GetInTouch";
 import { BRAND_CONFIG } from "@/config/brand";
 
-// Helper to format currency
+// Helper to format currency in USD
 const formatPrice = (price: number) => {
-  return new Intl.NumberFormat("en-CA", {
+  return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "CAD",
+    currency: "USD",
     maximumFractionDigits: 0,
   }).format(price);
 };
 
 export default function CalculatorPage() {
-  // Calculator State (Realistic GTA Benchmarks)
-  const [homePrice, setHomePrice] = useState<number>(850000);
-  const [downPayment, setDownPayment] = useState<number>(170000);
-  const [loanTerm, setLoanTerm] = useState<number>(25);
-  const [interestRate, setInterestRate] = useState<number>(5.25);
-  const [propertyTax, setPropertyTax] = useState<number>(5800);
-  const [homeInsurance, setHomeInsurance] = useState<number>(2100);
-  const [hoaFees, setHoaFees] = useState<number>(0);
+  // Calculator State (Realistic Southern California / LA Benchmarks)
+  const [homePrice, setHomePrice] = useState<number>(1200000);
+  const [downPayment, setDownPayment] = useState<number>(240000);
+  const [loanTerm, setLoanTerm] = useState<number>(30);
+  const [interestRate, setInterestRate] = useState<number>(6.5);
+  const [propertyTax, setPropertyTax] = useState<number>(15000);
+  const [homeInsurance, setHomeInsurance] = useState<number>(2400);
+  const [hoaFees, setHoaFees] = useState<number>(250);
 
   // Derived Values
   const downPaymentPercent = homePrice > 0 ? (downPayment / homePrice) * 100 : 0;
@@ -61,28 +61,28 @@ export default function CalculatorPage() {
   };
 
   return (
-    <div className="bg-slate-950 min-h-screen text-white">
+    <div className="bg-[#2b4b46] min-h-screen text-white">
       
       {/* 1. HERO SECTION */}
       <section className="relative h-[380px] lg:h-[440px] flex flex-col items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1600&auto=format&fit=crop" 
-            alt="GTA Property Calculator Background"
+            alt="SoCal Property Calculator Background"
             className="w-full h-full object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#2b4b46]/90 via-[#2b4b46]/75 to-[#2b4b46]" />
         </div>
         
         <div className="relative z-10 text-center px-6 w-full max-w-4xl mx-auto mt-10">
-          <div className="inline-block bg-[#4D71A3] text-white text-[10px] md:text-xs font-semibold tracking-widest uppercase px-5 py-2 rounded-full mb-4 shadow-md">
-            GTA Mortgage & Carrying Costs
+          <div className="inline-block bg-[#e9b3b0] text-[#2b4b46] text-[10px] md:text-xs font-semibold tracking-widest uppercase px-5 py-2 rounded-full mb-4 shadow-md">
+            SoCal & Cross-Border Carrying Costs
           </div>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight uppercase">
             Mortgage Calculator
           </h1>
           <p className="text-[#F9F6F0]/85 text-sm md:text-base font-light mt-3 max-w-xl mx-auto">
-            Estimate your monthly payments, principal breakdown, taxes, and carrying costs for GTA properties.
+            Estimate your monthly payments, U.S. mortgage breakdown, California property taxes, and carrying costs for SoCal homes.
           </p>
         </div>
       </section>
@@ -92,11 +92,11 @@ export default function CalculatorPage() {
         <div className="max-w-[1240px] mx-auto px-6 lg:px-12">
           
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-3">
-              Calculate Your Monthly Payment
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-[#2b4b46] tracking-tight mb-3">
+              Calculate Your Monthly U.S. Payment
             </h2>
             <p className="text-stone-600 text-sm font-normal">
-              Adjust home price, down payment, interest rates, and fees to see estimated monthly costs.
+              Adjust purchase price, down payment, interest rates, and fees to evaluate monthly carrying costs in USD.
             </p>
           </div>
 
@@ -108,9 +108,9 @@ export default function CalculatorPage() {
               {/* Home Price */}
               <div className="flex flex-col gap-2 text-left">
                 <label className="text-xs font-semibold uppercase tracking-wider text-stone-700">
-                  Home Price
+                  Home Price (USD)
                 </label>
-                <div className="flex items-center bg-white border border-stone-300 rounded-xl overflow-hidden focus-within:border-[#4D71A3] transition-colors shadow-sm">
+                <div className="flex items-center bg-white border border-stone-300 rounded-xl overflow-hidden focus-within:border-[#2b4b46] transition-colors shadow-sm">
                   <span className="px-4 text-stone-500 font-semibold border-r border-stone-200">$</span>
                   <input 
                     type="number" 
@@ -127,7 +127,7 @@ export default function CalculatorPage() {
                   Down Payment
                 </label>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <div className="flex items-center bg-white border border-stone-300 rounded-xl overflow-hidden focus-within:border-[#4D71A3] transition-colors shadow-sm flex-1">
+                  <div className="flex items-center bg-white border border-stone-300 rounded-xl overflow-hidden focus-within:border-[#2b4b46] transition-colors shadow-sm flex-1">
                     <span className="px-4 text-stone-500 font-semibold border-r border-stone-200">$</span>
                     <input 
                       type="number" 
@@ -136,7 +136,7 @@ export default function CalculatorPage() {
                       className="w-full bg-transparent text-slate-900 font-semibold px-4 py-3.5 outline-none text-sm"
                     />
                   </div>
-                  <div className="flex items-center bg-white border border-stone-300 rounded-xl overflow-hidden focus-within:border-[#4D71A3] transition-colors shadow-sm w-full sm:w-32 shrink-0">
+                  <div className="flex items-center bg-white border border-stone-300 rounded-xl overflow-hidden focus-within:border-[#2b4b46] transition-colors shadow-sm w-full sm:w-32 shrink-0">
                     <input 
                       type="number" 
                       value={downPaymentPercent.toFixed(1)}
@@ -157,10 +157,10 @@ export default function CalculatorPage() {
                   <select 
                     value={loanTerm}
                     onChange={(e) => setLoanTerm(Number(e.target.value))}
-                    className="w-full bg-white border border-stone-300 rounded-xl text-slate-900 font-semibold px-4 py-3.5 outline-none appearance-none focus:border-[#4D71A3] transition-colors shadow-sm text-sm"
+                    className="w-full bg-white border border-stone-300 rounded-xl text-slate-900 font-semibold px-4 py-3.5 outline-none appearance-none focus:border-[#2b4b46] transition-colors shadow-sm text-sm"
                   >
-                    <option value={30}>30 Years</option>
-                    <option value={25}>25 Years (Standard Canadian Amortization)</option>
+                    <option value={30}>30 Years (Standard U.S. Fixed Mortgage)</option>
+                    <option value={25}>25 Years</option>
                     <option value={20}>20 Years</option>
                     <option value={15}>15 Years</option>
                   </select>
@@ -175,7 +175,7 @@ export default function CalculatorPage() {
               {/* Interest Rate */}
               <div className="flex flex-col gap-2 text-left">
                 <label className="text-xs font-semibold uppercase tracking-wider text-stone-700">
-                  Interest Rate (%)
+                  U.S. Interest Rate (%)
                 </label>
                 <div className="flex flex-col gap-3 bg-white border border-stone-300 rounded-xl p-4 shadow-sm">
                   <div className="flex items-center justify-between">
@@ -195,7 +195,7 @@ export default function CalculatorPage() {
                     step="0.1"
                     value={interestRate}
                     onChange={(e) => setInterestRate(Number(e.target.value))}
-                    className="w-full h-1.5 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-[#4D71A3]"
+                    className="w-full h-1.5 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-[#2b4b46]"
                   />
                 </div>
               </div>
@@ -203,9 +203,9 @@ export default function CalculatorPage() {
               {/* Property Tax */}
               <div className="flex flex-col gap-2 text-left">
                 <label className="text-xs font-semibold uppercase tracking-wider text-stone-700">
-                  Property Tax (Annual)
+                  California Property Tax (Annual USD)
                 </label>
-                <div className="flex items-center bg-white border border-stone-300 rounded-xl overflow-hidden focus-within:border-[#4D71A3] transition-colors shadow-sm">
+                <div className="flex items-center bg-white border border-stone-300 rounded-xl overflow-hidden focus-within:border-[#2b4b46] transition-colors shadow-sm">
                   <span className="px-4 text-stone-500 font-semibold border-r border-stone-200">$</span>
                   <input 
                     type="number" 
@@ -219,9 +219,9 @@ export default function CalculatorPage() {
               {/* Home Insurance */}
               <div className="flex flex-col gap-2 text-left">
                 <label className="text-xs font-semibold uppercase tracking-wider text-stone-700">
-                  Home Insurance (Annual)
+                  Homeowners Insurance (Annual USD)
                 </label>
-                <div className="flex items-center bg-white border border-stone-300 rounded-xl overflow-hidden focus-within:border-[#4D71A3] transition-colors shadow-sm">
+                <div className="flex items-center bg-white border border-stone-300 rounded-xl overflow-hidden focus-within:border-[#2b4b46] transition-colors shadow-sm">
                   <span className="px-4 text-stone-500 font-semibold border-r border-stone-200">$</span>
                   <input 
                     type="number" 
@@ -235,9 +235,9 @@ export default function CalculatorPage() {
               {/* HOA / Condo Fees */}
               <div className="flex flex-col gap-2 text-left">
                 <label className="text-xs font-semibold uppercase tracking-wider text-stone-700">
-                  Condo Fees (Monthly)
+                  HOA / Community Fees (Monthly USD)
                 </label>
-                <div className="flex items-center bg-white border border-stone-300 rounded-xl overflow-hidden focus-within:border-[#4D71A3] transition-colors shadow-sm">
+                <div className="flex items-center bg-white border border-stone-300 rounded-xl overflow-hidden focus-within:border-[#2b4b46] transition-colors shadow-sm">
                   <span className="px-4 text-stone-500 font-semibold border-r border-stone-200">$</span>
                   <input 
                     type="number" 
@@ -250,18 +250,18 @@ export default function CalculatorPage() {
 
             </div>
 
-            {/* RIGHT COLUMN: RESULTS CARD & POST-CALCULATOR CONSULTATION CTA */}
+            {/* RIGHT COLUMN: RESULTS CARD & CONSULTATION CTA */}
             <div className="lg:col-span-5 lg:sticky lg:top-28">
               <div className="bg-white border border-stone-200/80 p-8 rounded-3xl shadow-xl text-left">
                 
                 <h3 className="text-xs font-semibold uppercase tracking-wider text-stone-500 mb-1">
                   Estimated Monthly Payment
                 </h3>
-                <div className="font-display text-4xl sm:text-5xl font-bold text-slate-900 mb-1">
+                <div className="font-display text-4xl sm:text-5xl font-bold text-[#2b4b46] mb-1">
                   {formatPrice(totalMonthlyPayment)}
                 </div>
-                <p className="text-[10px] font-semibold tracking-widest uppercase text-[#4D71A3] mb-8">
-                  Per Month
+                <p className="text-[10px] font-semibold tracking-widest uppercase text-[#2b4b46] mb-8">
+                  Per Month (USD)
                 </p>
 
                 <div className="flex flex-col gap-4 text-xs sm:text-sm mb-8 border-t border-stone-100 pt-6">
@@ -278,28 +278,28 @@ export default function CalculatorPage() {
                     <span className="font-bold text-slate-900">{formatPrice(monthlyHomeInsurance)}</span>
                   </div>
                   <div className="flex justify-between items-center pb-3 border-b border-stone-100">
-                    <span className="text-stone-600">Maintenance / HOA</span>
+                    <span className="text-stone-600">HOA Fees</span>
                     <span className="font-bold text-slate-900">{formatPrice(hoaFees)}</span>
                   </div>
                   <div className="flex justify-between items-center pt-2">
-                    <span className="text-stone-600 font-medium">Total Loan Amount</span>
+                    <span className="text-stone-600 font-medium">Total U.S. Loan Amount</span>
                     <span className="font-bold text-slate-900">{formatPrice(loanAmount)}</span>
                   </div>
                 </div>
 
-                {/* REQUIRED POST-CALCULATOR PROMPT & CTA */}
+                {/* POST-CALCULATOR PROMPT & CTA */}
                 <div className="bg-[#F9F6F0] p-6 rounded-2xl border border-stone-200/80 text-center">
-                  <h4 className="font-display text-base font-bold text-slate-900 mb-2">
-                    Want us to run the numbers on a real property?
+                  <h4 className="font-display text-base font-bold text-[#2b4b46] mb-2">
+                    Want Samuel to run the numbers on a specific property?
                   </h4>
                   <p className="text-stone-600 text-xs mb-5 leading-relaxed font-normal">
-                    Get Reema and Pirasha to analyze exact cash flows, maintenance fees, taxes, and rental yields for specific GTA listings.
+                    Get Samuel Muttiah to analyze exact cash flows, HOA regulations, California tax obligations, and U.S. cross-border lender options for specific listings.
                   </p>
                   <Link 
                     href="/contact?intent=Book%20a%20Consultation" 
-                    className="inline-flex items-center justify-center gap-2 w-full bg-[#4D71A3] text-white hover:bg-[#3B5B88] py-3.5 px-6 rounded-full text-xs font-semibold tracking-wider uppercase transition-all shadow-md font-sans"
+                    className="inline-flex items-center justify-center gap-2 w-full bg-[#2b4b46] text-white hover:bg-[#1f3733] py-3.5 px-6 rounded-full text-xs font-semibold tracking-wider uppercase transition-all shadow-md font-sans"
                   >
-                    <span>Book a Consultation</span>
+                    <span>Book a Strategy Call</span>
                     <ArrowRight size={14} />
                   </Link>
                 </div>

@@ -2,15 +2,15 @@
 
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { MapPin, Phone, Mail, Building2, Send, CheckCircle2 } from "lucide-react";
+import { MapPin, Phone, Mail, Building2, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { BRAND_CONFIG } from "@/config/brand";
 
 const lookingToOptions = [
-  "Buy",
-  "Sell",
-  "Invest",
-  "Explore Pre-Construction",
+  "Buy in Southern California",
+  "Sell Canadian Property",
+  "Cross-Border Relocation",
+  "U.S. Real Estate Investment",
   "Get a Home Evaluation",
   "Other"
 ];
@@ -61,59 +61,59 @@ function ContactFormContent() {
   return (
     <div className="flex flex-col lg:flex-row bg-white rounded-3xl overflow-hidden shadow-2xl border border-stone-200/80">
       
-      {/* LEFT SIDE: REALTHER CREDENTIALS PANEL */}
-      <div className="w-full lg:w-5/12 bg-slate-950 text-white p-8 sm:p-12 lg:p-14 relative overflow-hidden flex flex-col justify-between">
+      {/* LEFT SIDE: SAMUEL CREDENTIALS PANEL */}
+      <div className="w-full lg:w-5/12 bg-[#2b4b46] text-white p-8 sm:p-12 lg:p-14 relative overflow-hidden flex flex-col justify-between">
         
         <div className="relative z-10">
-          <div className="inline-block bg-[#4D71A3] text-white text-[10px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
-            Founding Leadership
+          <div className="inline-block bg-[#e9b3b0] text-[#2b4b46] text-[10px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+            Transition Realtor
           </div>
 
           <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight mb-2 uppercase">
-            RealtHer Group
+            Samuel Muttiah
           </h2>
-          <p className="text-[#4D71A3] text-xs font-semibold uppercase tracking-wider mb-6">
-            Reema Shahzad & Pirasha Vygunthavasa
+          <p className="text-[#e9b3b0] text-xs font-semibold uppercase tracking-wider mb-6">
+            Canada to Southern California
           </p>
 
-          <p className="text-[#F9F6F0]/80 text-xs sm:text-sm leading-relaxed mb-10 font-light">
-            Strategic guidance, local GTA market expertise, and client-first negotiation advocacy. Connect with us directly to discuss your property plans.
+          <p className="text-[#F9F6F0]/85 text-xs sm:text-sm leading-relaxed mb-10 font-light">
+            Guiding your move with 10+ years of dual-market experience, clear cross-border strategies, and dedicated negotiation advocacy.
           </p>
 
           {/* Direct Info Channels */}
           <div className="flex flex-col gap-6">
             <a href={`tel:${BRAND_CONFIG.agent.phoneRaw}`} className="flex items-center gap-4 group w-fit">
-              <div className="w-11 h-11 rounded-full bg-stone-900 border border-stone-800 flex items-center justify-center text-[#4D71A3] group-hover:bg-[#4D71A3] group-hover:text-white transition-all shrink-0">
+              <div className="w-11 h-11 rounded-full bg-slate-950/40 border border-white/15 flex items-center justify-center text-[#e9b3b0] group-hover:bg-[#e9b3b0] group-hover:text-[#2b4b46] transition-all shrink-0">
                 <Phone size={18} />
               </div>
               <div className="text-left">
-                <span className="text-[10px] uppercase font-semibold text-stone-400 tracking-wider block mb-0.5">Call / Text</span>
-                <span className="text-xs sm:text-sm font-semibold tracking-wide text-white group-hover:text-[#4D71A3] transition-colors">
+                <span className="text-[10px] uppercase font-semibold text-stone-300 tracking-wider block mb-0.5">Call / Text</span>
+                <span className="text-xs sm:text-sm font-semibold tracking-wide text-white group-hover:text-[#e9b3b0] transition-colors">
                   {BRAND_CONFIG.agent.phone}
                 </span>
               </div>
             </a>
 
             <a href={`mailto:${BRAND_CONFIG.agent.email}`} className="flex items-center gap-4 group w-fit">
-              <div className="w-11 h-11 rounded-full bg-stone-900 border border-stone-800 flex items-center justify-center text-[#4D71A3] group-hover:bg-[#4D71A3] group-hover:text-white transition-all shrink-0">
+              <div className="w-11 h-11 rounded-full bg-slate-950/40 border border-white/15 flex items-center justify-center text-[#e9b3b0] group-hover:bg-[#e9b3b0] group-hover:text-[#2b4b46] transition-all shrink-0">
                 <Mail size={18} />
               </div>
               <div className="text-left">
-                <span className="text-[10px] uppercase font-semibold text-stone-400 tracking-wider block mb-0.5">Email</span>
-                <span className="text-xs sm:text-sm font-semibold tracking-wide text-white group-hover:text-[#4D71A3] transition-colors">
+                <span className="text-[10px] uppercase font-semibold text-stone-300 tracking-wider block mb-0.5">Email</span>
+                <span className="text-xs sm:text-sm font-semibold tracking-wide text-white group-hover:text-[#e9b3b0] transition-colors">
                   {BRAND_CONFIG.agent.email}
                 </span>
               </div>
             </a>
 
             <div className="flex items-center gap-4 text-left">
-              <div className="w-11 h-11 rounded-full bg-stone-900 border border-stone-800 flex items-center justify-center text-[#4D71A3] shrink-0">
+              <div className="w-11 h-11 rounded-full bg-slate-950/40 border border-white/15 flex items-center justify-center text-[#e9b3b0] shrink-0">
                 <MapPin size={18} />
               </div>
               <div>
-                <span className="text-[10px] uppercase font-semibold text-stone-400 tracking-wider block mb-0.5">GTA Coverage</span>
-                <span className="text-xs sm:text-sm text-stone-300 font-medium leading-relaxed block">
-                  Toronto, Durham, York & Peel Regions
+                <span className="text-[10px] uppercase font-semibold text-stone-300 tracking-wider block mb-0.5">Primary Markets</span>
+                <span className="text-xs sm:text-sm text-stone-200 font-medium leading-relaxed block">
+                  Beverly Hills, Greater Los Angeles & SoCal
                 </span>
               </div>
             </div>
@@ -121,10 +121,10 @@ function ContactFormContent() {
         </div>
 
         {/* Brokerage Affiliation */}
-        <div className="mt-12 pt-6 border-t border-stone-800 relative z-10 flex items-center gap-3 text-left">
-          <Building2 className="text-[#4D71A3]" size={22} />
+        <div className="mt-12 pt-6 border-t border-white/15 relative z-10 flex items-center gap-3 text-left">
+          <Building2 className="text-[#e9b3b0]" size={22} />
           <div>
-            <span className="text-[9px] uppercase font-semibold tracking-widest text-stone-400 block mb-0.5">Brokerage Licensing</span>
+            <span className="text-[9px] uppercase font-semibold tracking-widest text-stone-300 block mb-0.5">Brokerage Affiliation</span>
             <span className="text-xs font-semibold tracking-wider text-white">{BRAND_CONFIG.brokerage.name}</span>
           </div>
         </div>
@@ -134,12 +134,12 @@ function ContactFormContent() {
       <div className="w-full lg:w-7/12 bg-white p-8 sm:p-12 lg:p-14 flex flex-col justify-center text-left">
         {submitted ? (
           <div className="bg-[#FDFBF7] border border-stone-200/80 rounded-3xl p-10 text-center mx-auto w-full animate-fade-in">
-            <div className="w-14 h-14 bg-[#4D71A3]/10 text-[#4D71A3] rounded-full flex items-center justify-center mx-auto mb-5 border border-[#4D71A3]/20">
+            <div className="w-14 h-14 bg-[#2b4b46]/10 text-[#2b4b46] rounded-full flex items-center justify-center mx-auto mb-5 border border-[#2b4b46]/20">
               <CheckCircle2 size={30} />
             </div>
-            <h3 className="font-display text-2xl font-bold text-slate-900 mb-2">Message Received</h3>
+            <h3 className="font-display text-2xl font-bold text-[#2b4b46] mb-2">Inquiry Received</h3>
             <p className="text-stone-600 text-sm leading-relaxed mb-8 max-w-md mx-auto font-normal">
-              Thank you for reaching out. Reema or Pirasha will personally review your inquiry and connect with you shortly.
+              Thank you for reaching out. Samuel Muttiah will personally review your details and connect with you shortly to discuss your cross-border strategy.
             </p>
             <button 
               onClick={() => {
@@ -154,19 +154,19 @@ function ContactFormContent() {
                   message: ""
                 });
               }}
-              className="bg-slate-900 text-[#F9F6F0] hover:bg-slate-800 text-xs font-semibold tracking-wider uppercase px-8 py-3.5 rounded-full transition-colors font-sans"
+              className="bg-[#2b4b46] text-white hover:bg-[#1f3733] text-xs font-semibold tracking-wider uppercase px-8 py-3.5 rounded-full transition-colors font-sans"
             >
-              Send Another Inquiry
+              Send Another Message
             </button>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="w-full flex flex-col gap-6">
             <div>
-              <h2 className="font-display text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-1">
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#2b4b46] tracking-tight mb-1">
                 Direct Inquiry
               </h2>
               <p className="text-stone-500 text-xs font-normal">
-                Complete the fields below so we can tailor our advice to your specific timeline.
+                Complete the fields below to schedule your private cross-border consultation.
               </p>
             </div>
 
@@ -182,7 +182,7 @@ function ContactFormContent() {
                   value={form.firstName}
                   onChange={(e) => setForm({ ...form, firstName: e.target.value })}
                   placeholder="Jane"
-                  className="w-full bg-[#FDFBF7] border border-stone-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#4D71A3] transition-all"
+                  className="w-full bg-[#FDFBF7] border border-stone-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#2b4b46] transition-all"
                 />
               </div>
               <div>
@@ -194,7 +194,7 @@ function ContactFormContent() {
                   value={form.lastName}
                   onChange={(e) => setForm({ ...form, lastName: e.target.value })}
                   placeholder="Doe"
-                  className="w-full bg-[#FDFBF7] border border-stone-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#4D71A3] transition-all"
+                  className="w-full bg-[#FDFBF7] border border-stone-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#2b4b46] transition-all"
                 />
               </div>
             </div>
@@ -211,7 +211,7 @@ function ContactFormContent() {
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   placeholder="jane@example.com"
-                  className="w-full bg-[#FDFBF7] border border-stone-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#4D71A3] transition-all"
+                  className="w-full bg-[#FDFBF7] border border-stone-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#2b4b46] transition-all"
                 />
               </div>
               <div>
@@ -223,8 +223,8 @@ function ContactFormContent() {
                   required 
                   value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  placeholder="(416) 000-0000"
-                  className="w-full bg-[#FDFBF7] border border-stone-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#4D71A3] transition-all"
+                  placeholder="(323) 493-2617"
+                  className="w-full bg-[#FDFBF7] border border-stone-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#2b4b46] transition-all"
                 />
               </div>
             </div>
@@ -238,7 +238,7 @@ function ContactFormContent() {
                 required 
                 value={form.lookingTo}
                 onChange={(e) => setForm({ ...form, lookingTo: e.target.value })}
-                className="w-full bg-[#FDFBF7] border border-stone-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#4D71A3] transition-all"
+                className="w-full bg-[#FDFBF7] border border-stone-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#2b4b46] transition-all"
               >
                 <option value="" disabled>Select an option</option>
                 {lookingToOptions.map((opt) => (
@@ -256,7 +256,7 @@ function ContactFormContent() {
                 required 
                 value={form.timeline}
                 onChange={(e) => setForm({ ...form, timeline: e.target.value })}
-                className="w-full bg-[#FDFBF7] border border-stone-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#4D71A3] transition-all"
+                className="w-full bg-[#FDFBF7] border border-stone-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#2b4b46] transition-all"
               >
                 <option value="" disabled>Select your timeline</option>
                 {timelineOptions.map((opt) => (
@@ -268,27 +268,27 @@ function ContactFormContent() {
             {/* MESSAGE */}
             <div>
               <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
-                How Can We Help You? *
+                How Can Samuel Help You? *
               </label>
               <textarea 
                 rows={4} 
                 required 
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                placeholder="Tell us about your preferred GTA neighborhood, property criteria, or questions..."
-                className="w-full bg-[#FDFBF7] border border-stone-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#4D71A3] transition-all resize-none"
+                placeholder="Tell us about your target SoCal neighborhood, cross-border timeline, or specific questions..."
+                className="w-full bg-[#FDFBF7] border border-stone-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#2b4b46] transition-all resize-none"
               />
             </div>
 
             <p className="text-[10px] text-stone-400 leading-relaxed">
-              By submitting this form, you agree to be contacted by RealtHer Group via email, call, or text regarding your GTA real estate inquiry.
+              By submitting this form, you agree to be contacted by Samuel Muttiah (Keller Williams Beverly Hills) via email, call, or text regarding your real estate inquiry.
             </p>
 
-            {/* REQUIRED SUBMIT CTA */}
+            {/* SUBMIT CTA */}
             <button 
               type="submit" 
               disabled={loading}
-              className="bg-[#4D71A3] text-white hover:bg-[#3B5B88] min-h-[52px] px-8 py-3.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 shadow-lg disabled:opacity-60 flex items-center justify-center font-sans self-start w-full sm:w-auto"
+              className="bg-[#2b4b46] text-white hover:bg-[#1f3733] min-h-[52px] px-8 py-3.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 shadow-lg disabled:opacity-60 flex items-center justify-center font-sans self-start w-full sm:w-auto"
             >
               {loading ? "Sending..." : "Let's Talk About Your Next Move"}
             </button>
@@ -305,25 +305,25 @@ export default function ContactPage() {
     <div className="bg-[#FDFBF7] min-h-screen">
       
       {/* 1. HERO SECTION */}
-      <section className="bg-slate-950 relative pt-32 pb-32 lg:pt-40 lg:pb-40 overflow-hidden">
+      <section className="bg-[#2b4b46] relative pt-32 pb-32 lg:pt-40 lg:pb-40 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop" 
-            alt="RealtHer Contact Background"
+            src="https://images.unsplash.com/photo-1580655653885-65763b2597d0?q=80&w=1600&auto=format&fit=crop" 
+            alt="Southern California Contact Background"
             className="w-full h-full object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#2b4b46]/90 via-[#2b4b46]/75 to-[#2b4b46]" />
         </div>
 
         <div className="max-w-[1240px] mx-auto px-6 lg:px-12 relative z-10 text-center">
           <div className="flex items-center justify-center gap-2 text-[10px] font-semibold tracking-widest uppercase text-stone-300 mb-4">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <span className="text-stone-500">/</span>
+            <span className="text-stone-400">/</span>
             <span className="text-white">Contact</span>
           </div>
 
-          <div className="inline-block bg-[#4D71A3] text-white text-[10px] md:text-xs font-semibold tracking-widest uppercase px-5 py-2 rounded-full mb-4 shadow-md">
-            Greater Toronto Area Real Estate
+          <div className="inline-block bg-[#e9b3b0] text-[#2b4b46] text-[10px] md:text-xs font-semibold tracking-widest uppercase px-5 py-2 rounded-full mb-4 shadow-md">
+            Canada to Southern California
           </div>
           
           <div className="max-w-2xl mx-auto">
@@ -331,7 +331,7 @@ export default function ContactPage() {
               Get In Touch
             </h1>
             <p className="text-[#F9F6F0]/85 text-sm md:text-base leading-relaxed font-light">
-              Have questions about first-time home buying, pre-construction allocations, or home valuations? Connect directly with Reema Shahzad and Pirasha Vygunthavasa.
+              Have questions about cross-border relocation, buying in Southern California, or selling Canadian property? Connect directly with Samuel Muttiah.
             </p>
           </div>
         </div>

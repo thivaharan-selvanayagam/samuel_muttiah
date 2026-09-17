@@ -19,7 +19,7 @@ export default function Footer() {
                 <img 
                   src={BRAND_CONFIG.meta.logoSvgPath} 
                   alt={BRAND_CONFIG.meta.siteName} 
-                  className="h-20 w-auto object-contain brightness-0 invert transition-opacity group-hover:opacity-85" 
+                  className="h-20 w-auto object-contain transition-opacity group-hover:opacity-85" 
                 />
               ) : (
                 <span className="text-2xl font-bold tracking-widest font-display text-white transition-opacity group-hover:opacity-85">
@@ -79,8 +79,6 @@ export default function Footer() {
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
               <li><Link href="/about" className="hover:text-white transition-colors">About Samuel</Link></li>
               <li><Link href="/all-homes" className="hover:text-white transition-colors">Property Search</Link></li>
-              <li><Link href="/buyers-guide" className="hover:text-white transition-colors">Cross-Border Buyer's Guide</Link></li>
-              <li><Link href="/sellers-guide" className="hover:text-white transition-colors">Seller's Guide</Link></li>
               <li><Link href="/home-evaluation" className="hover:text-white transition-colors">Home Evaluation</Link></li>
             </ul>
           </div>
@@ -92,8 +90,8 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-xs font-medium text-stone-300">
               <li><Link href="/calculator" className="hover:text-white transition-colors">Mortgage Calculator</Link></li>
-              <li><Link href="/testimonials" className="hover:text-white transition-colors">Client Testimonials</Link></li>
-              <li><Link href="/neighbourhoods" className="hover:text-white transition-colors">SoCal Markets</Link></li>
+              <li><Link href="/buyers-guide" className="hover:text-white transition-colors">Cross-Border Buyer's Guide</Link></li>
+              <li><Link href="/sellers-guide" className="hover:text-white transition-colors">Seller's Guide</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>
