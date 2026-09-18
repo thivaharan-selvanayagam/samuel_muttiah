@@ -46,7 +46,7 @@ export default function HeroVariant4() {
           {/* 2-BUTTON ACTION DECK */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-xl mx-auto">
             <Link 
-              href="/all-homes" 
+              href="/buyers-guide" 
               className="w-full sm:w-auto min-w-[220px] min-h-[54px] flex items-center justify-center px-8 py-3.5 rounded-full bg-[#e9b3b0] text-[#2b4b46] text-xs font-semibold tracking-wider uppercase hover:bg-white hover:-translate-y-0.5 transition-all duration-300 shadow-xl font-sans text-center leading-tight"
             >
               Buy With Us
