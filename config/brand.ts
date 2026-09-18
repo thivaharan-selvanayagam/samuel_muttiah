@@ -9,8 +9,8 @@ export const BRAND_CONFIG = {
     phone: "(323) 493-2617",
     phoneRaw: "3234932617",
     email: "samuel.muttiah@kw.com",
-    headshot: "/images/sam.jpeg",
-    fullphoto: "/images/sam.jpeg",
+    headshot: "/images/sam.jpg",
+    fullphoto: "/images/sam.jpg",
   },
 
   // Brokerage & Company Details
@@ -36,7 +36,7 @@ export const BRAND_CONFIG = {
     logoSvgPath: "/images/logo.webp",
     title: "Samuel Muttiah | Transition Realtor | Southern California",
     description: "Specialized Transition Realtor helping clients seamlessly relocate from Canada to Southern California. Buying, selling, and investing in U.S. real estate.",
-    coverImage: "/images/sam.jpeg",
+    coverImage: "/images/sam.jpg",
     domain: "https://samuelmuttiah.com/",
   },
 

@@ -33,9 +33,9 @@ export default function HeroVariant4() {
             Canada to Southern California Relocation Specialist
           </div>
 
-          {/* Headline Layout */}
+          {/* Headline Layout (2 Lines) */}
           <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight uppercase max-w-5xl leading-[1.15] mb-6 drop-shadow-md animate-fade-up">
-            Seamless Cross-Border Real Estate
+            Samuel Muttiah <br /> Real Estate
           </h1>
 
           {/* Subtitle Description */}

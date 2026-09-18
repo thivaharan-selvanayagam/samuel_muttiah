@@ -4,7 +4,7 @@ import GetInTouch from "@/components/GetInTouch";
 import { BRAND_CONFIG } from "@/config/brand";
 
 export const metadata = { 
-  title: `Cross-Border Buyer's Guide | ${BRAND_CONFIG.meta.siteName}` 
+  title: `Buyer's Guide | ${BRAND_CONFIG.meta.siteName}` 
 };
 
 const buyerSteps = [
@@ -14,17 +14,17 @@ const buyerSteps = [
     img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1000&q=80'
   },
   { 
-    title: 'Plan Your Cross-Border Budget & Currency Strategy', 
+    title: 'Plan Your Budget & Currency Strategy', 
     text: `Purchasing across borders involves multi-currency planning. Factor in exchange rate fluctuations, U.S. property taxes, HOA fees, insurance, and maintenance costs. Setting a clear, comfortable monthly budget in USD ensures your U.S. real estate purchase supports your broader financial goals.`,
     img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000&q=80'
   },
   { 
-    title: 'Secure U.S. Cross-Border Mortgage Pre-Approval', 
+    title: 'Secure U.S. Mortgage Pre-Approval', 
     text: `Canadian buyers can secure financing in the U.S. through cross-border lenders who recognize Canadian credit history and income documentation. Obtaining a formal U.S. pre-approval locks in your purchasing power and demonstrates financial readiness to American sellers.`,
     img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1000&q=80'
   },
   { 
-    title: 'Partner with a Specialized Transition Realtor', 
+    title: 'Partner with an Experienced Realtor', 
     text: `Cross-border transactions require more than standard real estate service. With over 10 years of dual-market experience in both the GTA and Greater Los Angeles, Samuel Muttiah guides you through the differences in U.S. contracts, disclosures, and negotiation strategies.`,
     img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1000&q=80'
   },
@@ -66,20 +66,20 @@ export default function BuyersGuidePage() {
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto w-full mt-10">
           <div className="inline-block bg-[#e9b3b0] text-[#2b4b46] text-[10px] md:text-xs font-semibold tracking-widest uppercase px-5 py-2 rounded-full mb-6 shadow-md">
-            Canada to SoCal Buyers & Investors
+            Homebuyers & Investors
           </div>
           <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight animate-fade-up uppercase leading-[1.1]">
-            Cross-Border Buyer's Guide
+            Buyer's Guide
           </h1>
           <p className="mt-4 text-[#F9F6F0]/90 text-base md:text-xl font-light max-w-2xl mx-auto">
-            A strategic, step-by-step roadmap to purchasing real estate in Southern California from Canada.
+            A strategic, step-by-step roadmap to purchasing real estate in Southern California.
           </p>
           <div className="mt-8">
             <Link 
               href="/contact?intent=Book%20a%20Buyer%20Consultation"
               className="inline-flex items-center gap-2 bg-[#e9b3b0] text-[#2b4b46] hover:bg-white px-8 py-4 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 shadow-xl"
             >
-              <Calendar size={15} /> Book a Transition Consultation
+              <Calendar size={15} /> Book a Consultation
             </Link>
           </div>
         </div>
@@ -89,14 +89,14 @@ export default function BuyersGuidePage() {
       <section className="py-20 bg-[#FDFBF7]">
         <div className="max-w-[780px] mx-auto px-6 text-center">
           <div className="bg-[#2b4b46]/10 text-[#2b4b46] text-[10px] md:text-xs font-semibold tracking-widest uppercase px-5 py-2 rounded-full mb-5 w-fit mx-auto shadow-sm border border-[#2b4b46]/20">
-            Cross-Border Real Estate Framework
+            Real Estate Framework
           </div>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-[#2b4b46] tracking-tight">
-            Clear Guidance Across Borders
+            Clear Guidance at Every Step
           </h2>
           <div className="w-12 h-[2px] bg-[#e9b3b0] mx-auto my-6"></div>
           <p className="text-stone-600 text-sm md:text-base leading-relaxed font-normal">
-            Relocating or investing across borders involves unique financial, legal, and transactional steps. Samuel Muttiah provides a clear, dual-market framework so you navigate the U.S. property market with complete confidence.
+            Purchasing property is one of the most important decisions you will make. Samuel Muttiah provides a clear, dual-market framework so you navigate the U.S. property market with complete confidence.
           </p>
         </div>
       </section>
@@ -153,7 +153,7 @@ export default function BuyersGuidePage() {
               href="/contact?intent=Book%20a%20Buyer%20Consultation" 
               className="inline-flex items-center justify-center gap-2 bg-[#2b4b46] text-white hover:bg-[#1f3733] px-8 py-4 rounded-full text-xs font-semibold tracking-wider uppercase transition-all shadow-md font-sans"
             >
-              <Calendar size={16} /> Book a Transition Consultation
+              <Calendar size={16} /> Book a Consultation
             </Link>
             <Link 
               href="/all-homes" 
